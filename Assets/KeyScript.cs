@@ -17,4 +17,17 @@ public class KeyScript : MonoBehaviour
     {
         
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Box")
+        {
+
+            // Then do something here!
+            Renderer rend = GetComponent<Renderer>();
+            rend.material.SetColor("_BaseColor", Color.purple);
+            
+        }
+
+    }
 }
