@@ -3,31 +3,25 @@ using UnityEngine;
 
 public class KeyScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Renderer renderer = GetComponent<Renderer>();
         renderer.material.SetColor("_BaseColor", Color.red);
-        Rigidbody rb = GetComponent<Rigidbody>();
-        rb.AddTorque(new Vector3(UnityEngine.Random.Range(1f, 3f), 0f, UnityEngine.Random.Range(1f, 3f)), ForceMode.Impulse);
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.AddTorque(UnityEngine.Random.Range(1f, 3f), ForceMode2D.Impulse);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == "Box")
         {
-
-            // Then do something here!
             Renderer rend = GetComponent<Renderer>();
             rend.material.SetColor("_BaseColor", Color.purple);
-            
         }
-
     }
 }
