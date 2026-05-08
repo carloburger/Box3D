@@ -7,8 +7,8 @@ public class KeyScript : MonoBehaviour
     {
         Renderer renderer = GetComponent<Renderer>();
         renderer.material.SetColor("_BaseColor", Color.red);
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        rb.AddTorque(UnityEngine.Random.Range(1f, 3f), ForceMode2D.Impulse);
+        Rigidbody rb = GetComponent<Rigidbody>();
+        rb.AddTorque(new Vector3(UnityEngine.Random.Range(1f, 3f), 0f, UnityEngine.Random.Range(1f, 3f)), ForceMode.Impulse);
     }
 
     void Update()
@@ -16,7 +16,7 @@ public class KeyScript : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "Box")
         {
