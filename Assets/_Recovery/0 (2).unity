@@ -868,23 +868,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1811079754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811079733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52a95dac28d2f47deb70da3116888213, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pickable
-  itemName: Key
-  icon: {fileID: 0}
-  hoverScale: 1.3
-  scaleSpeed: 8
-  outlineStrength: 1.2
 --- !u!1001 &1966313161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -896,10 +879,6 @@ PrefabInstance:
     - target: {fileID: 1930125013191846, guid: b2a695e06c2e5b2479e979dd3b2197e8, type: 3}
       propertyPath: m_Name
       value: key
-      objectReference: {fileID: 0}
-    - target: {fileID: 1930125013191846, guid: b2a695e06c2e5b2479e979dd3b2197e8, type: 3}
-      propertyPath: m_TagString
-      value: Pickable
       objectReference: {fileID: 0}
     - target: {fileID: 4276918860184454, guid: b2a695e06c2e5b2479e979dd3b2197e8, type: 3}
       propertyPath: m_LocalScale.x
@@ -977,9 +956,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1930125013191846, guid: b2a695e06c2e5b2479e979dd3b2197e8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1811079749}
-    - targetCorrespondingSourceObject: {fileID: 1930125013191846, guid: b2a695e06c2e5b2479e979dd3b2197e8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1811079754}
   m_SourcePrefab: {fileID: 100100000, guid: b2a695e06c2e5b2479e979dd3b2197e8, type: 3}
 --- !u!1 &2010036670
 GameObject:
@@ -1828,8 +1804,6 @@ GameObject:
   - component: {fileID: 4706063327457949947}
   - component: {fileID: 4652484126144693477}
   - component: {fileID: 4706063327457949950}
-  - component: {fileID: 4706063327457949952}
-  - component: {fileID: 4706063327457949951}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -1955,31 +1929,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!114 &4706063327457949951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4706063327457949944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d05f723454d94b079210b4a8ac635df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Inventory
---- !u!114 &4706063327457949952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4706063327457949944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98657614658aa46c5a1ea31a01569d0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
-  interactRange: 3
 --- !u!1 &5680702203670083745
 GameObject:
   m_ObjectHideFlags: 0
