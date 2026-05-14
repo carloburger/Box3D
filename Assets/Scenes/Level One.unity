@@ -430,7 +430,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00006823102, y: 117.00018}
+  m_AnchoredPosition: {x: -0.00006823102, y: 117.00041}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &282326330
@@ -1612,8 +1612,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 706475044}
   m_HandleRect: {fileID: 706475043}
   m_Direction: 2
-  m_Value: -0.000001825838
-  m_Size: 0.61
+  m_Value: -0.000003260425
+  m_Size: 0.6099859
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4298,6 +4298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrapdoorScript
   Camera: {fileID: 1166629006}
   CamPos: {x: 0, y: 0, z: 0}
+  drop: 5
 --- !u!4 &2068577245 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 190c74b3fa6719446b1758497167196e, type: 3}
