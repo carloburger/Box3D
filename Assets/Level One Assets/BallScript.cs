@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BallScript : MonoBehaviour
 {
+    public GameObject otherBall;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -10,6 +11,11 @@ public class BallScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        
+    }
+
+    private void OnCollisionEnter(Collision collision)
     {
         
     }
