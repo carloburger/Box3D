@@ -28,7 +28,8 @@ public class TrapdoorScript : MonoBehaviour
             CamPos = Camera.transform.position;
             if (CamPos.y > drop)
             {
-                Camera.transform.position = new Vector3((float)-2.74, CamPos.y - 4, (float)2.16);
+                Camera.transform.position = new Vector3((float)-3.48981, (float)1.3, (float)2.199269);
+                Debug.Log(Camera.transform.position);
             }
             else
             {

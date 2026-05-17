@@ -1,12 +1,13 @@
-using UnityEngine;
+using GLTFast.Schema;
 using UnityEditor;
+using UnityEngine;
 
 public class CubeGridGenerator : EditorWindow
 {
     [MenuItem("Tools/Generate Cube Grid")]
     static void Generate()
     {
-        Material mat = AssetDatabase.LoadAssetAtPath<Material>("Assets/Level One Assets/BasementColour.mat");
+        UnityEngine.Material mat = AssetDatabase.LoadAssetAtPath<UnityEngine.Material>("Assets/Level One Assets/BasementColour.mat");
         Debug.Log("Material: " + mat);
 
         GameObject parent = new GameObject("CubeGrid");
@@ -15,10 +16,14 @@ public class CubeGridGenerator : EditorWindow
             for (int y = 0; y < 4; y++)
                 for (int z = 0; z < 20; z++)
                 {
-                    GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                    cube.transform.position = new Vector3(x, y, z);
-                    cube.transform.parent = parent.transform;
-                    cube.GetComponent<Renderer>().material = mat;
+                    if (x < 2 || x > 5 || z < 2 || z > 5 || y < 2)
+                    {
+                        GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                        cube.transform.position = new Vector3(x, y, z);
+                        cube.transform.parent = parent.transform;
+                        cube.GetComponent<Renderer>().material = mat;
+                        BoxCollider collide = cube.AddComponent<BoxCollider>();
+                    }                   
                 }
     }
 }
