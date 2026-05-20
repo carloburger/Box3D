@@ -27194,7 +27194,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00006823102, y: 117.00028}
+  m_AnchoredPosition: {x: -0.00006823102, y: 117.000534}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &266237522
@@ -95885,8 +95885,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 706475044}
   m_HandleRect: {fileID: 706475043}
   m_Direction: 2
-  m_Value: -0.0000026083408
-  m_Size: 0.6100001
+  m_Value: -0.000005086263
+  m_Size: 0.6099678
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -215967,6 +215967,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 984448925886346834, guid: 11d14f935540d0641b88626b6a8fb997, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6582746711609421981}
+    - targetCorrespondingSourceObject: {fileID: 984448925886346834, guid: 11d14f935540d0641b88626b6a8fb997, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6582746711609421982}
   m_SourcePrefab: {fileID: 100100000, guid: 11d14f935540d0641b88626b6a8fb997, type: 3}
 --- !u!1 &6582746711609421975 stripped
 GameObject:
@@ -215985,8 +215988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a95dac28d2f47deb70da3116888213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickable
-  itemName: Key
-  icon: {fileID: 0}
+  itemData: {fileID: 0}
   hoverScale: 1.3
   scaleSpeed: 8
   outlineStrength: 1.2
@@ -216017,6 +216019,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: ff3b4d87e9a2fa446a46d48257dd3659, type: 3}
+--- !u!114 &6582746711609421982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6582746711609421975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52a95dac28d2f47deb70da3116888213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pickable
+  itemData: {fileID: 11400000, guid: 3afb3a8c4010d4b168f3529f7b1e2d9d, type: 2}
+  hoverScale: 1.3
+  scaleSpeed: 8
+  outlineStrength: 1.2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
