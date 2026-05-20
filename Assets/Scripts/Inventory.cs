@@ -6,9 +6,9 @@ public class Inventory : MonoBehaviour
 {
     public static Inventory Instance { get; private set; }
 
-    private List<string> items = new List<string>();
+    private List<ItemSO> items = new List<ItemSO>();
 
-    public event Action<string> OnItemAdded;
+    public event Action<ItemSO> OnItemAdded;
 
     void Awake()
     {
@@ -20,19 +20,19 @@ public class Inventory : MonoBehaviour
             Instance = this;
     }
 
-    public void AddItem(string item)
+    public void AddItem(ItemSO item)
     {
         items.Add(item);
         Debug.Log($"Added {item} to inventory.");
         OnItemAdded?.Invoke(item);
     }
 
-    public bool HasItem(string item)
+    public bool HasItem(ItemSO item)
     {
         return items.Contains(item);
     }
 
-    public List<string> GetItems() => items;
+    public List<ItemSO> GetItems() => items;
 
     
 }

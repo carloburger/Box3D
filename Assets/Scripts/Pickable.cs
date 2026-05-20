@@ -5,8 +5,7 @@ using System;
 public class Pickable : MonoBehaviour
 {
     [Header("Item Info")]
-    public string itemName = "Key";
-    public Sprite icon;               
+    public ItemSO itemData;         
 
     [Header("Hover Scale")]
     public float hoverScale = 1.3f;
@@ -36,7 +35,7 @@ public class Pickable : MonoBehaviour
 
     public void PickUp()
     {
-        Inventory.Instance.AddItem(itemName);
+        Inventory.Instance.AddItem(itemData);
         Destroy(gameObject); // remove from scene
     }
 }

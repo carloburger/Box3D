@@ -19,10 +19,10 @@ public class InventoryUI : MonoBehaviour
         foreach (Transform child in slotContainer)
             Destroy(child.gameObject);
 
-        foreach (string item in Inventory.Instance.GetItems())
+        foreach (ItemSO item in Inventory.Instance.GetItems())
         {
             GameObject slot = Instantiate(itemSlotPrefab, slotContainer);
-            slot.GetComponentInChildren<TextMeshProUGUI>().text = item;
+            slot.GetComponentInChildren<TextMeshProUGUI>().text = item.itemName;
         }
     }
 

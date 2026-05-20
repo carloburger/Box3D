@@ -1715,23 +1715,6 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
---- !u!114 &1811079749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811079733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52a95dac28d2f47deb70da3116888213, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  itemName: Key
-  icon: {fileID: 0}
-  hoverScale: 1.3
-  scaleSpeed: 8
-  outlineStrength: 1.2
 --- !u!65 &1811079750
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1780,6 +1763,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1811079752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811079733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52a95dac28d2f47deb70da3116888213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pickable
+  itemData: {fileID: 11400000, guid: 9063eabf1ce33448b88b6aa2e2c3c2ca, type: 2}
+  hoverScale: 1.3
+  scaleSpeed: 8
+  outlineStrength: 1.2
 --- !u!1001 &1966313161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1868,13 +1867,13 @@ PrefabInstance:
       addedObject: {fileID: 1811079736}
     - targetCorrespondingSourceObject: {fileID: 1930125013191846, guid: b2a695e06c2e5b2479e979dd3b2197e8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1811079749}
-    - targetCorrespondingSourceObject: {fileID: 1930125013191846, guid: b2a695e06c2e5b2479e979dd3b2197e8, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1811079751}
     - targetCorrespondingSourceObject: {fileID: 1930125013191846, guid: b2a695e06c2e5b2479e979dd3b2197e8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1811079750}
+    - targetCorrespondingSourceObject: {fileID: 1930125013191846, guid: b2a695e06c2e5b2479e979dd3b2197e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1811079752}
   m_SourcePrefab: {fileID: 100100000, guid: b2a695e06c2e5b2479e979dd3b2197e8, type: 3}
 --- !u!1 &2010036670
 GameObject:
