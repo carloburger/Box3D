@@ -1,8 +1,11 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class BoxScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public ItemSO Key;
     void Start()
     {
         
@@ -12,5 +15,12 @@ public class BoxScript : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnMouseDown()
+    {
+        if (Inventory.Instance.HasItem(Key)){
+            SceneManager.LoadScene("Level One");
+        }
     }
 }

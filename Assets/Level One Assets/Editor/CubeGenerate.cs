@@ -16,6 +16,7 @@ public class CubeGridGenerator : EditorWindow
             for (int y = 0; y < 4; y++)
                 for (int z = 0; z < 20; z++)
                 {
+                    
                     if (x < 2 || x > 5 || z < 2 || z > 5 || y < 2)
                     {
                         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
@@ -23,6 +24,8 @@ public class CubeGridGenerator : EditorWindow
                         cube.transform.parent = parent.transform;
                         cube.GetComponent<Renderer>().material = mat;
                         BoxCollider collide = cube.AddComponent<BoxCollider>();
+                        if (x != 0 && y != 0 && z != 0)
+                            cube.AddComponent<cube>();
                     }                   
                 }
     }
