@@ -2,42 +2,38 @@ using UnityEngine;
 
 public class TrapdoorScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public GameObject Camera;
-    public Vector3 CamPos;
-    public bool isOpen;
-    public Vector3 dropPos;
+    public GameObject player;         // drag PlayerCapsule here
+    public Vector3 dropPos;           // set to somewhere inside the gap e.g. (3, 2.5, 3)
+    public Vector3 surfacePos;        // the position to return to on the surface
+    public float drop = -2f;
 
-    public float drop;
+    private CharacterController cc;
+    private bool isBelow = false;
+
     void Start()
     {
-        CamPos = Camera.transform.position;
-        isOpen = true;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        CamPos = Camera.transform.position;
+        cc = player.GetComponent<CharacterController>();
     }
 
     private void OnMouseDown()
     {
-        if (gameObject.activeSelf)
+        if (!isBelow)
         {
-            CharacterController cc = Camera.GetComponent<CharacterController>();
-            cc.enabled = false;
-
-            if (CamPos.y > drop)
-            {
-                Camera.transform.position = dropPos;
-            }
-            else
-            {
-                Camera.transform.position = new Vector3(5.64f, 0.41f, -11.78f);
-            }
-
-            cc.enabled = true;
+            surfacePos = player.transform.position; // remember where we came from
+            TeleportPlayer(dropPos);
+            isBelow = true;
         }
+        else
+        {
+            TeleportPlayer(surfacePos);
+            isBelow = false;
+        }
+    }
+
+    private void TeleportPlayer(Vector3 destination)
+    {
+        cc.enabled = false;
+        player.transform.position = destination;
+        cc.enabled = true;
     }
 }
