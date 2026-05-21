@@ -18,22 +18,21 @@ public class TrapdoorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        CamPos = Camera.transform.position;
     }
 
     private void OnMouseDown()
     {
         if (gameObject.activeSelf)
         {
-            CamPos = Camera.transform.position;
-            if (CamPos.y > drop)
+            if (CamPos.y > (float)drop)
             {
-                Camera.transform.position = new Vector3((float)-3.48981, (float)1.3, (float)2.199269);
+                Camera.transform.position = new Vector3((float)4.6, (float)-2.96, (float)-16.32);
                 Debug.Log(Camera.transform.position);
             }
             else
             {
-                Camera.transform.position = new Vector3(CamPos.x, CamPos.y + 4, CamPos.z);
+                Camera.transform.position = new Vector3((float)5.64, (float)0.41, (float)-11.78);
             }
 
         }
