@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Assemblies;
 
 public class TrapdoorScript : MonoBehaviour
 {
@@ -7,6 +6,7 @@ public class TrapdoorScript : MonoBehaviour
     public GameObject Camera;
     public Vector3 CamPos;
     public bool isOpen;
+    public Vector3 dropPos;
 
     public float drop;
     void Start()
@@ -25,17 +25,19 @@ public class TrapdoorScript : MonoBehaviour
     {
         if (gameObject.activeSelf)
         {
-            if (CamPos.y > (float)drop)
+            CharacterController cc = Camera.GetComponent<CharacterController>();
+            cc.enabled = false;
+
+            if (CamPos.y > drop)
             {
-                Camera.transform.position = new Vector3((float)4.6, (float)-2.96, (float)-16.32);
-                Debug.Log(Camera.transform.position);
+                Camera.transform.position = dropPos;
             }
             else
             {
-                Camera.transform.position = new Vector3((float)5.64, (float)0.41, (float)-11.78);
+                Camera.transform.position = new Vector3(5.64f, 0.41f, -11.78f);
             }
 
+            cc.enabled = true;
         }
-        
     }
 }
