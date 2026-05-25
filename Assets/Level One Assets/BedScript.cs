@@ -7,6 +7,7 @@ public class BedScript : MonoBehaviour
     public Vector3 open;
     public Vector3 openPos;
     public GameObject Trapdoor;
+    public GameObject Lock;
 
     private bool isUpright = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,6 +16,7 @@ public class BedScript : MonoBehaviour
         upright = transform.eulerAngles;
         uprightPos = transform.position;
         Trapdoor.SetActive(false);
+        Lock.SetActive(false);
     }
 
     // Update is called once per frame
@@ -38,12 +40,14 @@ public class BedScript : MonoBehaviour
             transform.eulerAngles = open;
             transform.position = openPos;
             Trapdoor.SetActive(true);
+            Lock.SetActive(true);
         }
         else
         {
             transform.eulerAngles = upright;
             transform.position = uprightPos;
             Trapdoor.SetActive(false);
+            Lock.SetActive(false);
         }
         isUpright = !isUpright;
       
