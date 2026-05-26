@@ -101715,6 +101715,7 @@ MonoBehaviour:
   open: {x: 0, y: 0, z: 90}
   openPos: {x: 5.8, y: 4.8, z: -12.24}
   Trapdoor: {fileID: 2068577240}
+  Lock: {fileID: 1857240721}
 --- !u!1 &946430418
 GameObject:
   m_ObjectHideFlags: 0
@@ -198824,6 +198825,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855668946}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1857240721 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2593990056247519979, guid: 852a11fecc1877149be52139ea40a3be, type: 3}
+  m_PrefabInstance: {fileID: 1246431688}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1857295994
 GameObject:
   m_ObjectHideFlags: 0

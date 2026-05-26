@@ -92,31 +92,19 @@ public class MoveRuller : MonoBehaviour
 
     void RotateRullers()
     {
-        if (Keyboard.current[Key.W].wasPressedThisFrame)
+        Key[] numberKeys = {
+            Key.Digit0, Key.Digit1, Key.Digit2, Key.Digit3, Key.Digit4,
+            Key.Digit5, Key.Digit6, Key.Digit7, Key.Digit8, Key.Digit9
+        };
+            for (int i = 0; i <= 9; i++)
         {
-            _isActveEmission = true;
-            _scroolRuller = 36;
-            _rullers[_changeRuller].transform.Rotate(-_scroolRuller, 0, 0, Space.Self);
-
-            _numberArray[_changeRuller] += 1;
-
-            if (_numberArray[_changeRuller] > 9)
+            // Converts number 0-9 to KeyCode.Alpha0 - KeyCode.Alpha9
+            if (Keyboard.current[numberKeys[i]].wasPressedThisFrame)
             {
-                _numberArray[_changeRuller] = 0;
-            }
-        }
-
-        if (Keyboard.current[Key.S].wasPressedThisFrame)
-        {
-            _isActveEmission = true;
-            _scroolRuller = 36;
-            _rullers[_changeRuller].transform.Rotate(_scroolRuller, 0, 0, Space.Self);
-
-            _numberArray[_changeRuller] -= 1;
-
-            if (_numberArray[_changeRuller] < 0)
-            {
-                _numberArray[_changeRuller] = 9;
+                _isActveEmission = true;
+                _scroolRuller = 36;
+                _rullers[_changeRuller].transform.Rotate(-_scroolRuller, 0, 0, Space.Self);
+                _numberArray[_changeRuller] = i;
             }
         }
     }
