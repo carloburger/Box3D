@@ -8,6 +8,7 @@ public class MoveRuller : MonoBehaviour
 {
     PadLockPassword _lockPassword;
     PadLockEmissionColor _pLockColor;
+    public bool isUnlocked = false;
 
     [HideInInspector]
     public List <GameObject> _rullers = new List<GameObject>();
@@ -40,7 +41,6 @@ public class MoveRuller : MonoBehaviour
     {
         MoveRulles();
         RotateRullers();
-        _lockPassword.Password();
     }
 
     void MoveRulles()
@@ -104,7 +104,8 @@ public class MoveRuller : MonoBehaviour
                 _isActveEmission = true;
                 _scroolRuller = 36;
                 _rullers[_changeRuller].transform.Rotate(-_scroolRuller, 0, 0, Space.Self);
-                _numberArray[_changeRuller] = i;
+                _numberArray[_changeRuller] += 1;
+                _lockPassword.Password();
             }
         }
     }
