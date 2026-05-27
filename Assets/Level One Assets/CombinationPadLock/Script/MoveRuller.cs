@@ -39,55 +39,7 @@ public class MoveRuller : MonoBehaviour
     }
     void Update()
     {
-        MoveRulles();
         RotateRullers();
-    }
-
-    void MoveRulles()
-    {
-        if (Keyboard.current[Key.D].wasPressedThisFrame) 
-        {
-            _isActveEmission = true;
-            _changeRuller ++;
-            _numberRuller += 1;
-
-            if (_numberRuller > 3)
-            {
-                _numberRuller = 0;
-            }
-        }
-        if (Keyboard.current[Key.A].wasPressedThisFrame) 
-        {
-            _isActveEmission = true;
-            _changeRuller --;
-            _numberRuller -= 1;
-
-            if (_numberRuller < 0)
-            {
-                _numberRuller = 3;
-            }
-        }
-        _changeRuller = (_changeRuller + _rullers.Count) % _rullers.Count;
-
-
-        for (int i = 0; i < _rullers.Count; i++)
-        {
-            if (_isActveEmission)
-            {
-                if (_changeRuller == i)
-                {
-
-                    _rullers[i].GetComponent<PadLockEmissionColor>()._isSelect = true;
-                    _rullers[i].GetComponent<PadLockEmissionColor>().BlinkingMaterial();
-                }
-                else
-                {
-                    _rullers[i].GetComponent<PadLockEmissionColor>()._isSelect = false;
-                    _rullers[i].GetComponent<PadLockEmissionColor>().BlinkingMaterial();
-                }
-            }
-        }
-
     }
 
     void RotateRullers()
@@ -104,9 +56,15 @@ public class MoveRuller : MonoBehaviour
                 _isActveEmission = true;
                 _scroolRuller = 36;
                 _rullers[_changeRuller].transform.Rotate(-_scroolRuller, 0, 0, Space.Self);
-                _numberArray[_changeRuller] += 1;
+                _numberArray[_changeRuller] = i;
                 _lockPassword.Password();
             }
         }
     }
+
+    public void SetActiveRuller(int index)
+    {
+        _changeRuller = index;
+    }
 }
+

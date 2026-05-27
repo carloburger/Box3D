@@ -25,12 +25,21 @@ public class PadLockPassword : MonoBehaviour
             isOpen = true;
 
             // Es. Below the for loop to disable Blinking Material after the correct password
-            for (int i = 0; i < _moveRull._rullers.Count; i++)
+            for (int i = 0; i < 4; i++)
             {
                 _moveRull._rullers[i].GetComponent<PadLockEmissionColor>()._isSelect = false;
                 _moveRull._rullers[i].GetComponent<PadLockEmissionColor>().BlinkingMaterial();
             }
 
+        }
+        else
+        {
+            isOpen = false;
+            for (int i = 0; i < 4; i++)
+            {
+                _moveRull._rullers[i].GetComponent<PadLockEmissionColor>()._isSelect = true;
+                _moveRull._rullers[i].GetComponent<PadLockEmissionColor>().BlinkingMaterial();
+            }
         }
     }
 }
