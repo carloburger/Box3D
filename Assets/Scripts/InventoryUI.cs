@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using TMPro;
 
@@ -23,7 +24,26 @@ public class InventoryUI : MonoBehaviour
         {
             GameObject slot = Instantiate(itemSlotPrefab, slotContainer);
             slot.GetComponentInChildren<TextMeshProUGUI>().text = item.itemName;
+
+            Image icon = slot.GetComponentInChildren<Image>();
+            if (icon != null && item.icon != null)
+            {
+                icon.sprite = item.icon;
+                icon.color = Color.white;
+            }
+
+            ItemSO capturedItem = item; // Capture for closure
+
+            
+            Button button = slot.GetComponentInChildren<Button>();
+            if (button != null) {
+            button.onClick.AddListener(() => 
+            {
+                MainSlot.Instance.SetItem(capturedItem);
+                Toggle();
+            });
         }
+        }   
     }
 
     public void Toggle()

@@ -13,6 +13,9 @@ public class InventoryItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        iconImage.sprite = itemData.icon;
+        if(itemData != null && iconImage != null)
+        {
+            iconImage.sprite = itemData.icon;
+        }
     }
 }

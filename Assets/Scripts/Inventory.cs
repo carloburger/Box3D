@@ -18,6 +18,8 @@ public class Inventory : MonoBehaviour
             return;
         }
             Instance = this;
+
+        DontDestroyOnLoad(gameObject);
     }
 
     public void AddItem(ItemSO item)
