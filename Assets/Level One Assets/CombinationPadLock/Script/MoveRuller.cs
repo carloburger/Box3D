@@ -10,11 +10,11 @@ public class MoveRuller : MonoBehaviour
     PadLockEmissionColor _pLockColor;
     public bool isUnlocked = false;
 
-    [HideInInspector]
+    
     public List <GameObject> _rullers = new List<GameObject>();
     private int _scroolRuller = 0;
     private int _changeRuller = 0;
-    [HideInInspector]
+    
     public int[] _numberArray = {0,0,0,0};
 
     private int _numberRuller = 0;
@@ -39,32 +39,29 @@ public class MoveRuller : MonoBehaviour
     }
     void Update()
     {
-        RotateRullers();
+
     }
 
-    void RotateRullers()
+    public void RotateRullers(int index)
     {
-        Key[] numberKeys = {
-            Key.Digit0, Key.Digit1, Key.Digit2, Key.Digit3, Key.Digit4,
-            Key.Digit5, Key.Digit6, Key.Digit7, Key.Digit8, Key.Digit9
-        };
-            for (int i = 0; i <= 9; i++)
-        {
-            // Converts number 0-9 to KeyCode.Alpha0 - KeyCode.Alpha9
-            if (Keyboard.current[numberKeys[i]].wasPressedThisFrame)
-            {
-                _isActveEmission = true;
-                _scroolRuller = 36;
-                _rullers[_changeRuller].transform.Rotate(-_scroolRuller, 0, 0, Space.Self);
-                _numberArray[_changeRuller] = i;
-                _lockPassword.Password();
-            }
-        }
+        _isActveEmission = true;
+        _scroolRuller = 36;
+        _rullers[index].transform.Rotate(-_scroolRuller, 0, 0, Space.Self);
+        _numberArray[index] += 1;
+        _lockPassword.Password();
     }
 
     public void SetActiveRuller(int index)
     {
+        // Deselect all rulers first
+        foreach (GameObject r in _rullers)
+        {
+            r.GetComponent<PadLockEmissionColor>()._isSelect = false;
+        }
+
+        // Select only the active one
         _changeRuller = index;
+        _rullers[_changeRuller].GetComponent<PadLockEmissionColor>()._isSelect = true;
     }
 }
 

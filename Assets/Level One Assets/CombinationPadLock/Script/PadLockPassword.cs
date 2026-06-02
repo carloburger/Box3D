@@ -17,6 +17,7 @@ public class PadLockPassword : MonoBehaviour
 
     public void Password()
     {
+        Debug.Log("hehe");
         Debug.Log(_moveRull._numberArray);
         if (_moveRull._numberArray.SequenceEqual(_numberPassword))
         {
@@ -31,15 +32,6 @@ public class PadLockPassword : MonoBehaviour
                 _moveRull._rullers[i].GetComponent<PadLockEmissionColor>().BlinkingMaterial();
             }
 
-        }
-        else
-        {
-            isOpen = false;
-            for (int i = 0; i < 4; i++)
-            {
-                _moveRull._rullers[i].GetComponent<PadLockEmissionColor>()._isSelect = true;
-                _moveRull._rullers[i].GetComponent<PadLockEmissionColor>().BlinkingMaterial();
-            }
         }
     }
 }

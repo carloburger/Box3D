@@ -27018,9 +27018,30 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b6bef8e616618874aaa092edfd01f370, type: 3}
       insertIndex: -1
       addedObject: {fileID: 697077969}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b6bef8e616618874aaa092edfd01f370, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 4583831647803674585, guid: b6bef8e616618874aaa092edfd01f370, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 697077972}
+      addedObject: {fileID: 745214037}
+    - targetCorrespondingSourceObject: {fileID: 4583831647803674585, guid: b6bef8e616618874aaa092edfd01f370, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 745214041}
+    - targetCorrespondingSourceObject: {fileID: 5531777845261490984, guid: b6bef8e616618874aaa092edfd01f370, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1297487444}
+    - targetCorrespondingSourceObject: {fileID: 5531777845261490984, guid: b6bef8e616618874aaa092edfd01f370, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1297487448}
+    - targetCorrespondingSourceObject: {fileID: 7028254088279448452, guid: b6bef8e616618874aaa092edfd01f370, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 878821242}
+    - targetCorrespondingSourceObject: {fileID: 7028254088279448452, guid: b6bef8e616618874aaa092edfd01f370, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 878821246}
+    - targetCorrespondingSourceObject: {fileID: 6810669400427791379, guid: b6bef8e616618874aaa092edfd01f370, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1994085112}
+    - targetCorrespondingSourceObject: {fileID: 6810669400427791379, guid: b6bef8e616618874aaa092edfd01f370, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1994085116}
   m_SourcePrefab: {fileID: 100100000, guid: b6bef8e616618874aaa092edfd01f370, type: 3}
 --- !u!1 &240595439
 GameObject:
@@ -72960,7 +72981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PadLockPassword
   isOpen: 0
-  _numberPassword: 00000000000000000000000000000000
+  _numberPassword: 00000000030000000300000004000000
 --- !u!114 &697077971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72976,19 +72997,6 @@ MonoBehaviour:
   isUnlocked: 0
   _rullers: []
   _numberArray: 00000000000000000000000000000000
---- !u!114 &697077972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 697077967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0bf50ab0d5cc8148bdeac01c0bdda83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PadLockEmissionColor
-  _isSelect: 0
 --- !u!1 &697530718
 GameObject:
   m_ObjectHideFlags: 0
@@ -79500,6 +79508,47 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 743700525}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &745214033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4583831647803674585, guid: b6bef8e616618874aaa092edfd01f370, type: 3}
+  m_PrefabInstance: {fileID: 240505598}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &745214037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745214033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0bf50ab0d5cc8148bdeac01c0bdda83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PadLockEmissionColor
+  moveRuller: {fileID: 697077971}
+  _isSelect: 0
+  index: 0
+--- !u!65 &745214041
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745214033}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.07427535, y: 0.20000003, z: 0.19021137}
+  m_Center: {x: 0, y: 0.0000009536743, z: -0.000000003725291}
 --- !u!1 &745575009
 GameObject:
   m_ObjectHideFlags: 0
@@ -93937,6 +93986,47 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878653938}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &878821238 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7028254088279448452, guid: b6bef8e616618874aaa092edfd01f370, type: 3}
+  m_PrefabInstance: {fileID: 240505598}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &878821242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878821238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0bf50ab0d5cc8148bdeac01c0bdda83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PadLockEmissionColor
+  moveRuller: {fileID: 697077971}
+  _isSelect: 0
+  index: 2
+--- !u!65 &878821246
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878821238}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.07427535, y: 0.20000003, z: 0.19021137}
+  m_Center: {x: 0, y: 0.0000009536743, z: -0.000000003725291}
 --- !u!1 &880049844
 GameObject:
   m_ObjectHideFlags: 0
@@ -138769,6 +138859,47 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296984278}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1297487440 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5531777845261490984, guid: b6bef8e616618874aaa092edfd01f370, type: 3}
+  m_PrefabInstance: {fileID: 240505598}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1297487444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297487440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0bf50ab0d5cc8148bdeac01c0bdda83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PadLockEmissionColor
+  moveRuller: {fileID: 697077971}
+  _isSelect: 0
+  index: 1
+--- !u!65 &1297487448
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297487440}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.07427535, y: 0.20000003, z: 0.19021137}
+  m_Center: {x: 0, y: 0.0000009536743, z: -0.000000003725291}
 --- !u!1 &1298825208
 GameObject:
   m_ObjectHideFlags: 0
@@ -212411,6 +212542,47 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992865170}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1994085108 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6810669400427791379, guid: b6bef8e616618874aaa092edfd01f370, type: 3}
+  m_PrefabInstance: {fileID: 240505598}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1994085112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994085108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0bf50ab0d5cc8148bdeac01c0bdda83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PadLockEmissionColor
+  moveRuller: {fileID: 697077971}
+  _isSelect: 0
+  index: 3
+--- !u!65 &1994085116
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994085108}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.07427535, y: 0.20000003, z: 0.19021137}
+  m_Center: {x: 0, y: 0.0000009536743, z: -0.000000003725291}
 --- !u!1 &1995700135
 GameObject:
   m_ObjectHideFlags: 0
@@ -219633,6 +219805,7 @@ MonoBehaviour:
   dropPos: {x: 5.5, y: 2, z: -12.5}
   surfacePos: {x: 0, y: 0, z: 0}
   drop: -2
+  padlock: {fileID: 697077970}
 --- !u!4 &2068577245 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 190c74b3fa6719446b1758497167196e, type: 3}
