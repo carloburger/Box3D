@@ -17,8 +17,7 @@ public class PadLockPassword : MonoBehaviour
 
     public void Password()
     {
-        Debug.Log("hehe");
-        Debug.Log(_moveRull._numberArray);
+
         if (_moveRull._numberArray.SequenceEqual(_numberPassword))
         {
             // Here enter the event for the correct combination
