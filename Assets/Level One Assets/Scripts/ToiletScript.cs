@@ -16,7 +16,7 @@ public class ToiletScript : MonoBehaviour
         
     }
 
-    void OnMouseDown()
+    private void OnMouseDown()
     {
         if (isOpen)
         {
