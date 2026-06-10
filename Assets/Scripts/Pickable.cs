@@ -35,7 +35,6 @@ public class Pickable : MonoBehaviour
 
     public void PickUp()
     {
-        Debug.Log("inv instance: " + Inventory.Instance);
         Inventory.Instance.AddItem(itemData);
         Destroy(gameObject); // remove from scene
 

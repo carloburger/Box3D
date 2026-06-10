@@ -25,11 +25,21 @@ public class InventoryUI : MonoBehaviour
             GameObject slot = Instantiate(itemSlotPrefab, slotContainer);
             slot.GetComponentInChildren<TextMeshProUGUI>().text = item.itemName;
 
-            Image icon = slot.GetComponentInChildren<Image>();
+            Image icon = slot.transform.Find("Icon")?.GetComponent<Image>();
+            Debug.Log($"Icon object found: {slot.transform.Find("Icon") != null}");
+            Debug.Log($"Icon Image component: {icon != null}");
+            Debug.Log($"Item icon sprite: {item.icon != null}");
+            
             if (icon != null && item.icon != null)
             {
                 icon.sprite = item.icon;
                 icon.color = Color.white;
+            }
+
+            TextMeshProUGUI nameText = slot.transform.Find("Name")?.GetComponent<TextMeshProUGUI>();
+            if (nameText != null)
+            {
+                nameText.text = item.itemName;
             }
 
             ItemSO capturedItem = item; // Capture for closure

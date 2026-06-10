@@ -10,9 +10,16 @@ public class InventoryItem : MonoBehaviour
 
     [SerializeField] Image iconImage;
 
-    // Update is called once per frame
-    void Update()
+    void Start(){
+        if(itemData != null && iconImage != null)
+        {
+            iconImage.sprite = itemData.icon;
+        }
+    }
+
+    public void SetItem(ItemSO item)
     {
+        itemData = item;
         if(itemData != null && iconImage != null)
         {
             iconImage.sprite = itemData.icon;
